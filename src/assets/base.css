@@ -1,0 +1,83 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #000000; /* Cambiado a negro puro */
+  --vt-c-black-soft: #181818; /* Color oscuro */
+  --vt-c-black-mute: #222222; /* Color más oscuro */
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(255, 255, 255, 0.1); /* Divider claro para fondo oscuro */
+  --vt-c-divider-dark-2: rgba(255, 255, 255, 0.3); /* Divider más claro para fondo oscuro */
+
+  --vt-c-text-light-1: rgba(255, 255, 255, 1); /* Texto blanco */
+  --vt-c-text-light-2: rgba(255, 255, 255, 0.66); /* Texto blanco suave */
+  --vt-c-text-dark-1: var(--vt-c-white); /* Cambiado a negro para compatibilidad */
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-text: var(--vt-c-white); 
+  --color-background-soft: var(--vt-c-black-soft);
+  --color-background-mute: var(--vt-c-black-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black-mute); /* Fondo blanco */
+
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+    
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
+  color: var(--color-text); /* Color de texto */
+  background: var(--color-background); /* Fondo de la página */
+  transition:
+    color 0.5s,
+    background-color 0.5s; /* Transición suave entre modo claro y oscuro */
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif; /* Fuente con estilo Roboto */
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Centramos el contenido */
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  justify-content: center; /* Centrado vertical */
+  align-items: center; /* Centrado horizontal */
+  padding: 0 2rem; /* Espaciado lateral para que no se pegue al borde */
+}

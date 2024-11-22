@@ -1,0 +1,41 @@
+@import './base.css';
+
+#app {
+  display: flex;
+  flex-direction: column; /* Los elementos dentro de #app se apilan verticalmente */
+  align-items: center; /* Centrado horizontal dentro de #app */
+  justify-content: center; /* Centrado vertical dentro de #app */
+  width: 100%; /* Asegura que #app ocupe el 100% del espacio disponible */
+  max-width: 1280px; /* Limita el ancho máximo */
+  margin: 0 auto; /* Centra #app horizontalmente */
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 2rem;
+}
+
+.modal-title
+{
+  color: black;
+}
+a,
+.blue {
+  text-decoration: none;
+  color: hsla(210, 100%, 37%, 1); /* Azul */
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(210, 100%, 37%, 0.2); /* Fondo azul al pasar el mouse */
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+}
